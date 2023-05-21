@@ -1,9 +1,7 @@
-node {
-  try {
-    stage('Checkout') {
-      checkout scm
-    }
+pipeline {
+    agent any
 
+    stages {
         stage('Build') {
             steps {
                         checkout scm
@@ -21,9 +19,5 @@ node {
      //       cleanWs()
      //   }
 }
-
-  catch (err) {
-    throw err
-  }
 }
 
