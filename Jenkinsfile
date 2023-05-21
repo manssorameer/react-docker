@@ -3,9 +3,7 @@ node {
     stage('Checkout') {
       checkout scm
     }
-  
-  
-     stages {
+
         stage('Build') {
             steps {
                         checkout scm
@@ -23,7 +21,7 @@ node {
      //       cleanWs()
      //   }
 }
-}
+
   catch (err) {
     throw err
   }
