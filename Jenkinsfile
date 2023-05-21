@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                        checkout scm
+                   
                         sh 'docker build -t react-backend:0.1 --no-cache .'
-                        sh 'docker run -p 3000:8080 react-backend:0.1'
+                        sh 'docker run -p 3000:3000 react-backend:0.1'
             }
         }
         stage('Test') { 
